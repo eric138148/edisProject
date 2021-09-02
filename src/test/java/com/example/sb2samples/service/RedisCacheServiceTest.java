@@ -30,7 +30,7 @@ public class RedisCacheServiceTest {
     public void test() {
         User user = new User();
         user.setId(1l);
-        user.setUsername("maki");
+        user.setUsername("eric");
         user.setPassword("1234");
         redisCacheService.redisCache("1",user);
 
@@ -59,7 +59,7 @@ public class RedisCacheServiceTest {
         lists.add(user);
         lists.add(user1);
 //        redisCacheService.redisArrayCache("key",lists);
-        redisCacheService.redisArrayCacheExpireSeconds("key",lists,50);
+        redisCacheService.redisArrayCacheExpireSeconds("key",lists,500);
     }
 
     @Test
